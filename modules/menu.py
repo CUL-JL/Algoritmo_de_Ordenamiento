@@ -21,19 +21,20 @@ def pedir_lista(txt):
         except ValueError: print('Error: ingreso de valor no numérico.\n') # Manejo de errores
 
 # Funciones principales
-def ejecutar_opcion(list, option): 
+def ejecutar_opcion(list, option):
+    list_copy = list.copy() # Copia de la lista original
     match option:
         case 1: # Ordenamiento Burbuja (Bubble Sort)
-            bubble_sort(list) # Llamado a la función de ordenamiento Burbuja
+            bubble_sort(list_copy) # Llamado a la función de ordenamiento Burbuja
         
         case 2: # Ordenamiento por Selección (Selection Sort)
-            selection_sort(list) # Llamado a la función de ordenamiento por Selección
+            selection_sort(list_copy) # Llamado a la función de ordenamiento por Selección
 
         case 3: # Ordenamiento por Inserción (Insertion Sort)
-            insertion_sort(list) # Llamado a la función de ordenamiento por Inserción
+            insertion_sort(list_copy) # Llamado a la función de ordenamiento por Inserción
 
         case 4: # Ordenamiento Rápido (Quick Sort)
-            quick_sort(list) # Llamado a la función de ordenamiento Rápido
+            quick_sort(list_copy) # Llamado a la función de ordenamiento Rápido
 
         case 5: print('Saliendo del programa...'); exit() # Salir del programa
 
