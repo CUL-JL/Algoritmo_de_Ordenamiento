@@ -2,6 +2,7 @@
 from modules.BubbleSort import bubble_sort
 from modules.SelectionSort import selection_sort
 from modules.InsertionSort import insertion_sort
+from modules.QuickSort import quick_sort
 
 # Funciones secundarias
 def pedir_numero(num):
@@ -20,7 +21,7 @@ def pedir_lista(txt):
         except ValueError: print('Error: ingreso de valor no numérico.\n') # Manejo de errores
 
 # Funciones principales
-def ejecutar_opcion(list, option):
+def ejecutar_opcion(list, option): 
     match option:
         case 1: # Ordenamiento Burbuja (Bubble Sort)
             bubble_sort(list) # Llamado a la función de ordenamiento Burbuja
@@ -32,7 +33,7 @@ def ejecutar_opcion(list, option):
             insertion_sort(list) # Llamado a la función de ordenamiento por Inserción
 
         case 4: # Ordenamiento Rápido (Quick Sort)
-            pass
+            quick_sort(list) # Llamado a la función de ordenamiento Rápido
 
         case 5: print('Saliendo del programa...'); exit() # Salir del programa
 
